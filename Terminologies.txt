@@ -1,0 +1,13 @@
+1)RenderModel (Sitecore.Mvc.Presentation) - passed to a View rendering as a model object(Default)
+2)CustomItem (Sitecore.Data.Items) - A superset of Sitecore.Item which takes an 'item' as a constructor input(BreadCrumItem)
+3)View rendering should pass model if 'Model.' is being referenced and the model passed in sitecore should match the model in the View else 
+the following error comes - https://www.screencast.com/t/LqsPei72A
+4)Placeholder settings are only used in experience editors for dynamic rendering
+5)Placeholder settings key MUST match a placeholder on a Rendererlayout page
+
+Data sources
+
+1)By default the datasource is the Context item
+2)Renderings can have explicit data sources
+3)Rendering linked to Data source in 'Rendering' class
+4)Data sources can be used for personalization

@@ -151,10 +151,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CarouselSlide.cs" />
     <Compile Include="Controllers\CookBookController.cs" />
+    <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Models\BreadcrumbList.cs" />
+    <Compile Include="Models\BreadCrumItem.cs" />
+    <Compile Include="Models\CarouselItem.cs" />
+    <Compile Include="Models\ItemList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -163,12 +170,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\CookBook\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Web.config" />
-    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="Views\Shared\Main.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\CookBook\SideMenu.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\CookBook\BreadCrumList.cshtml" />
+    <Content Include="Views\Navigation\Carousel.cshtml" />
+    <None Include="Properties\PublishProfiles\IIS Deploy.pubxml" />
+    <Content Include="Views\CookBook\main.cshtml" />
+    <Content Include="Views\CookBook\ItemList.cshtml" />
+    <Content Include="Views\Shared\Async.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

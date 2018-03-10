@@ -1,0 +1,52 @@
+﻿<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <title>@Html.Sitecore().Field("Title")</title>
+</head>
+<body class="container-fluid">
+
+
+    <div>
+        <div id="sidemenu" class="col-md-3 sidenav">
+            @Html.Sitecore().Placeholder("sidemenu")
+        </div>
+        <div class="col-md-9">
+            <div id="breadcrums" class="col-md-12">
+                @Html.Sitecore().Placeholder("BreadCrums")
+            </div>
+            <div id="Carousel">
+                @Html.Sitecore().Rendering("{72A9C00C-58C7-4D51-A2DE-7FE5C3B57C3E}")
+            </div>
+            <div id="Simple list">
+                @Html.Sitecore().Placeholder("simple-list")
+            </div>
+            <div id="header">
+                <a href="/">
+                    @Html.Sitecore().Field("Logo",
+                   Sitecore.Context.Database.GetItem(
+                   "/sitecore/Content/Global/Configurations"))
+                </a>
+            </div>
+
+
+
+
+            <div id="main-content">
+                @Html.Sitecore().Placeholder("main")
+            </div>
+            <div id="footer">
+                @Html.Sitecore().Field("Copyright Text",
+              Sitecore.Context.Database.GetItem(
+              "/sitecore/Content/Global/Configurations"))
+            </div>
+        </div>
+    </div>
+</body>
+</html>
