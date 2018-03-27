@@ -1,0 +1,16 @@
+﻿@model RenderingModel
+@using Sitecore.Data.Fields
+
+<div class="jumbotron">
+    <h1 class="header">@Html.Sitecore().Field("Heading", Model.Item)</h1>
+
+    @{ 
+        ImageField backgroundImage = (ImageField)Model.Item.Fields["Background Image"];
+        var imageUrl = Sitecore.Resources.Media.MediaManager.GetMediaUrl(backgroundImage.MediaItem);
+    }
+</div>
+<style>
+    .jumbotron{
+     background-image:url(@imageUrl)
+    }
+</style>

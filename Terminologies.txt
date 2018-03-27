@@ -11,3 +11,32 @@ Data sources
 2)Renderings can have explicit data sources
 3)Rendering linked to Data source in 'Rendering' class
 4)Data sources can be used for personalization
+
+Admin pages
+1)http://sitecore91.local/sitecore/admin/stats.aspx = View stats of pages
+
+
+Events
+1)Attach custom handlers to events through patching example - item:saved
+
+Hooks?
+LinkProviders?
+Jobs?
+
+*)Versioned layouts - Different layout versions for different languages .Shared layout will contain common renderings for all language
+.Final layout will contain additional renderings for that language (Delta)
+
+*)Dictionary - Used as global placeholders for common texts ,  can have separate dictionaries for each site
+
+*)Alias- present in the 'Presentation' screen , can add a vanity URL to an existing URL (Entry created in Sitecore/System/Alias/)
+
+*)Clones - Useful in multisite setup ,  create a clone of an item from Site A to Site B (Site B inherits Site A  (changes on A reflect in B )
+as long as Site B item does not change the value after that they are separate)
+
+*)Wildcard items 
+
+Designing Sitecore sites
+See - https://www.youtube.com/watch?v=bbWhBUXO5Pc&t=31s
+*)Create data templates(Templates) and components (Data sources for rendering)
+*)Personalization and testing always requires data templates (Content items that are not pages)
+

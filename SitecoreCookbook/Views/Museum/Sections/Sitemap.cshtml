@@ -1,0 +1,17 @@
+﻿@model SitecoreCookbook.Models.Museum.SitemapList
+
+<ol class="breadcrumb">
+    @{
+        if (Model.SiteMapItems!=null)
+        {
+            foreach (var item in Model.SiteMapItems)
+            {
+
+                <li class="breadcrumb-item"> <a href="@item.Link">@item.PageName</a> </li>
+
+            }
+        }
+
+    }
+    <li class="breadcrumb-item active"> @Model.CurrentPageName</li>
+</ol>
