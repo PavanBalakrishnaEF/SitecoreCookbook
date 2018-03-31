@@ -1,0 +1,37 @@
+﻿@model RenderingModel
+@using Sitecore.Data.Fields
+@using Sitecore.Resources.Media;
+
+
+<div class="col-md-12"><h2>@Model.Item["Title"]</h2></div>
+
+
+@foreach (string itemid in (MultilistField)Model.Item.Fields["Events"])
+{
+    var eventItem = Sitecore.Context.Database.GetItem(itemid);
+
+    var dateField = (DateField)eventItem.Fields["StartTime"];
+    var startTime = Sitecore.DateUtil.IsoDateToDateTime(dateField.Value);
+
+
+    <div class="col-sm-3">
+        <div class="thumbnail">
+            <div class="overlay">
+                <i class="fa fa-share md"></i>
+            </div>
+            @Html.Sitecore().Field("Image", eventItem)
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h3><span class="label label-info">@startTime.ToString("dd MMM")</span></h3>
+            </div>
+            <div class="col-md-9">
+                <strong>     @Html.Sitecore().Field("Name", eventItem)</strong><br>
+                <em> @Html.Sitecore().Field("Location", eventItem)</em><br>
+                                                                       <span class="small"> @startTime.ToString("HH : mm")</span>
+            </div>
+        </div>
+    </div>
+}
+
+

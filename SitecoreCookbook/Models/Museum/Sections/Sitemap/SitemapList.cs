@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SitecoreCookbook.Models.Museum
+namespace SitecoreCookbook.Models.Museum.Sections.Sitemap
 {
     public class SitemapList : RenderingModel
     {

@@ -1,17 +1,18 @@
-﻿@model SitecoreCookbook.Models.Museum.SitemapList
-
-<ol class="breadcrumb">
+﻿@model SitecoreCookbook.Models.Museum.Sections.Sitemap.SitemapList
+<div class="btn-group btn-breadcrumb">
+    <a href="/" class="btn btn-default"><i class="glyphicon glyphicon-home"></i></a>
     @{
-        if (Model.SiteMapItems!=null)
+        if (Model.SiteMapItems != null)
         {
             foreach (var item in Model.SiteMapItems)
             {
 
-                <li class="breadcrumb-item"> <a href="@item.Link">@item.PageName</a> </li>
+                <a href="@item.Link" class="btn btn-default">@item.PageName</a>
+
 
             }
+            <a href="#" class="btn btn-default">@Model.CurrentPageName</a>
         }
 
     }
-    <li class="breadcrumb-item active"> @Model.CurrentPageName</li>
-</ol>
+</div>

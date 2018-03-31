@@ -1,0 +1,17 @@
+﻿@model RenderingModel
+@using System.Data.Linq
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+
+            @{
+                Sitecore.Data.Fields.MultilistField refMultilistField = Model.Item.Fields["MenuList"];
+                foreach (Sitecore.Data.Items.Item page in refMultilistField.GetItems())
+                {
+                    <li><a href="@Sitecore.Links.LinkManager.GetItemUrl(page)">@Html.Sitecore().Field("Title", page)</a></li>
+                }
+            }
+
+        </ul>
+    </div>
+</nav>

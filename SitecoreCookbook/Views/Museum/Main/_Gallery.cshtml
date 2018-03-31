@@ -1,0 +1,20 @@
+﻿@model RenderingModel
+<div class="row">
+    @foreach (string itemid in (Sitecore.Data.Fields.MultilistField)Model.Item.Fields["Images"])
+    {
+        var mediaItem= Sitecore.Context.Database.GetItem(itemid);
+
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <a target="_blank" href="@Sitecore.Resources.Media.MediaManager.GetMediaUrl(mediaItem)">
+                    <img src="@Sitecore.Resources.Media.MediaManager.GetMediaUrl(mediaItem)" alt="@Html.Sitecore().Field("alt",mediaItem)" style="width:100%">
+                    <div class="caption">
+                        <p>@Html.Sitecore().Field("Title",mediaItem)</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+    }
+</div>

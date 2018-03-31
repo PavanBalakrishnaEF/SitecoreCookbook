@@ -41,7 +41,7 @@
             <div class="intro">
                
                 <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                @Html.Sitecore().DynamicPlaceholder("main-content",1,1,1)
+                @Html.Sitecore().Placeholder("main-content")
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
     <section class="page-section cta">
         <div class="container">
             <div>
-                @Html.Sitecore().DynamicPlaceholder("promos")
+                @Html.Sitecore().Placeholder("promos")
             </div>
         </div>
     </section>
