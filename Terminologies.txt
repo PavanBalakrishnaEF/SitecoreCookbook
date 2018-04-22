@@ -40,3 +40,26 @@ See - https://www.youtube.com/watch?v=bbWhBUXO5Pc&t=31s
 *)Create data templates(Templates) and components (Data sources for rendering)
 *)Personalization and testing always requires data templates (Content items that are not pages)
 
+1)Branch Templates
+2)Gutter
+3)Sitecore domain - extranet and sitecore (Security domains)
+4)Security editor used to give permission to content items (Even workflow actions)
+5)Access viewer  - to display stay of access
+6)Sitecore buckstes -Used yo group unorganised content items based on some criteria (Like created date and re organize them
+
+Marketting
+Goals - 
+1)Can be set to pages and click events (On form submits ) 
+2)Goalds can have engamenet values and based on those values we can set personalization
+3)Personalization can be set based on if a goal is triggered
+
+campaigns
+1)Campaign are of two types - Online and offline
+2)Online campaigns are items which create a unique querystring URL that needs to be appended to campaign URL(On sitecore pages and even referring URLs)
+3)Onlien campaigns (Digital like social media pages and emails etc ) need to have campagn querystring appended to them so sitecore identifies the campagin
+4)Offline campaigns are linked to a sitecore page (Preferably with a Alias so its easy to rememeber)
+
+Taxonomies and facets
+1)Taxonomies are used for classification of things like campaigns and goals
+2)Facets are used for furthur classification (More specific)
+

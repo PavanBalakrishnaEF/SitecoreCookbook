@@ -1,0 +1,6 @@
+1)Branch Templates
+2)Gutter
+3)Sitecore domain - extranet and sitecore (Security domains)
+4)Security editor used to give permission to content items (Even workflow actions)
+5)Access viewer  - to display stay of access
+6)Sitecore buckstes -Used yo group unorganised content items based on some criteria (Like created date and re organize them
